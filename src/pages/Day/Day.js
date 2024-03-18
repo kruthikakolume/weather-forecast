@@ -14,7 +14,7 @@ function Day() {
     if (flag === false){
         axios({
             method: "get",
-            url: "http://api.openweathermap.org/data/2.5/forecast?q=boston&appid=0689be962e588bdcde7b7a2ee0833c79",
+            url: "https://api.openweathermap.org/data/2.5/forecast?q=boston&appid=0689be962e588bdcde7b7a2ee0833c79",
         }).then(function (response) {
             setData(response.data);
             setFlag(true);
@@ -42,7 +42,7 @@ function Day() {
                     datas?.list?.map(day => {
                         const datetime = day.dt_txt.split(" ");
                         if (datetime[1] === "12:00:00") {
-                        const url = `http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`;
+                        const url = `https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`;
                         var date = new Date(day.dt * 1000);
                         return (
                             <Col md="2.5">

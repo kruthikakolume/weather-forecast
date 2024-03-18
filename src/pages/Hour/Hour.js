@@ -10,7 +10,7 @@ function Hour() {
     const data = location.state.data;
 
     useEffect(() => {
-        if (data !== []) {
+        if (data != []) {
             const graphdata = [];
             data.forEach((d) => {
                 const datetime = d.dt_txt.split(" ");
