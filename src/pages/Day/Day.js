@@ -14,7 +14,7 @@ function Day() {
     if (flag === false){
         axios({
             method: "get",
-            url: "http://api.openweathermap.org/data/2.5/forecast?q=dharwad&appid=0689be962e588bdcde7b7a2ee0833c79",
+            url: "http://api.openweathermap.org/data/2.5/forecast?q=boston&appid=0689be962e588bdcde7b7a2ee0833c79",
         }).then(function (response) {
             setData(response.data);
             setFlag(true);
@@ -38,7 +38,7 @@ function Day() {
             <h1>WEATHER FORECAST</h1>
             <div class="container">
                 <Container>
-                    {datas !== {} ? 
+                    {datas != {} ? 
                     datas?.list?.map(day => {
                         const datetime = day.dt_txt.split(" ");
                         if (datetime[1] === "12:00:00") {
