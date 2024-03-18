@@ -1,6 +1,4 @@
-Assignment-10
-Task-2
-
+## Weather Forecast
 This is a weather forecasting application.
 It fetches api from https://openweathermap.org/ for real data.
 
